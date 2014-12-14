@@ -5,8 +5,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kparts
-Version: 5.4.0
-Release: 2
+Version: 5.5.0
+Release: 1
 Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/frameworks/%{version}/%{name}-%{version}.tar.xz
 Summary: Document centric plugin system
 URL: http://kde.org/
@@ -66,7 +66,7 @@ DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
 
 %files -f %{name}%{major}.lang
 %{_datadir}/kservicetypes5/*
-%{_libdir}/plugins/*.so
+%{_libdir}/qt5/plugins/*.so
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}
