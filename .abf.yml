@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kparts-5.13.0.tar.xz: a1b41e511f700a263f7d362deb6704b5c2572c27
+sources:
+  kparts-5.14.0.tar.xz: cbd5fb7579c43f704ed28d3925a4a391c52926c8
