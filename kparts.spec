@@ -5,7 +5,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kparts
-Version:	5.36.0
+Version:	5.37.0
 Release:	1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: Document centric plugin system
@@ -64,6 +64,7 @@ Development files for the KDE Frameworks 5 Parts library.
 
 %files -f %{name}%{major}.lang
 %{_datadir}/kservicetypes5/*
+%{_datadir}/kdevappwizard/templates/*
 %{_libdir}/qt5/plugins/*.so
 
 %files -n %{libname}
