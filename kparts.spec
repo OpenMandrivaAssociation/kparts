@@ -5,7 +5,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kparts
-Version:	5.70.0
+Version:	5.71.0
 Release:	1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: Document centric plugin system
@@ -78,6 +78,7 @@ Developer documentation for %{name} for use with Qt Assistant
 %{_datadir}/kservicetypes5/*
 %{_datadir}/kdevappwizard/templates/*
 %{_libdir}/qt5/plugins/*.so
+%{_datadir}/qlogging-categories5/kparts.categories
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}
