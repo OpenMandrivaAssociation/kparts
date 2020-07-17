@@ -6,7 +6,7 @@
 
 Name: kparts
 Version:	5.72.0
-Release:	2
+Release:	3
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Patch0: kparts-5.72.0-bug424352.patch
 Summary: Document centric plugin system
@@ -64,7 +64,7 @@ Suggests: %{devname} = %{EVRD}
 Developer documentation for %{name} for use with Qt Assistant
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build
